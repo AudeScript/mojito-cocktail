@@ -1,17 +1,17 @@
-import React from "react";
 import { cocktailLists, mockTailLists } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 const Cocktails = () => {
   useGSAP(() => {
-    //  gsap.registerPlugin(ScrollTrigger);
     const parallaxTimeline = gsap.timeline({
-      scrollTrigger: "#cocktails",
-      start: "top 30%",
-      end: "bottom 80%",
-      scrub: true,
+      scrollTrigger: {
+        trigger: "#cocktails",
+        start: "top 30%",
+        end: "bottom 80%",
+        scrub: true,
+        markers: true,
+      },
     });
 
     parallaxTimeline

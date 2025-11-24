@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { navLinks } from "../../constants";
 import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
+  const navRef = useRef(null);
   useGSAP(() => {
-    const navTween = gsap.timeline({
-      scrollTrigger: {
-        trigger: "nav",
-        start: "bottom top", // when the bottom of the nav-bar will reach the top of the viewport
-      },
-    });
+    // OLD WAY
+    // const navTween = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: "nav",
+    //     start: "bottom top", // when the bottom of the nav-bar will reach the top of the viewport
+    //   },
+    // });
 
-    navTween.fromTo(
-      "nav",
-      { backgroundColor: "transparent" },
+    gsap.fromTo(
+      navRef.current,
       {
-        backgroundColor: "#00000050",
-        backgroundFilter: "blur(10px)",
-        duration: 1,
-        ease: "power1.inOut",
+        backdropFilter: "blur(0px)",
+        backgroundColor: "transparent",
+      },
+      {
+        backdropFilter: "blur(10px)",
+        backgroundColor: "rgba(0,0,0,0.3)",
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "400 top", // amount of scroll before full blur
+          scrub: true, // smooth scroll → animation goes forward + backward
+        },
       }
     );
   });
   return (
-    <nav>
+    <nav ref={navRef}>
       <div>
         <a href="#home" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="logo" />

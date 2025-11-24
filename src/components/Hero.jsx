@@ -1,15 +1,14 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
 
 // gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Hero = () => {
-  // gsap.registerPlugin(ScrollTrigger,SplitText);
-
   const videoRef = useRef();
+  const heroRef = useRef();
   const isMobile = useMediaQuery({ maxWidth: 767 });
   useGSAP(() => {
     const heroSplit = new SplitText(".title", { type: "chars, words" });
@@ -19,7 +18,7 @@ const Hero = () => {
 
     gsap.from(heroSplit.chars, {
       yPercent: 100,
-      duration: 1,
+      duration: 1.8,
       ease: "expo.out",
       stagger: 0.06,
     });
@@ -36,7 +35,7 @@ const Hero = () => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#hero",
+          trigger: heroRef.current,
           start: "top top",
           end: "bottom top",
           scrub: true, //to make the scroll natural
@@ -67,7 +66,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="hero" className="noisy">
+      <section id="hero" className="noisy" ref={heroRef}>
         <h1 className="title"> MANOU</h1>
         <img
           src="/images/hero-left-leaf.png"
