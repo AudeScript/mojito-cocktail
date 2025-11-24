@@ -1,16 +1,82 @@
-# React + Vite
+# Tequila Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated Tequila-themed website built using **React**, **Tailwind CSS**, and **GSAP**. This project showcases smooth scroll-based animations, clean UI components, and a premium brand aesthetic.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** – Component-based UI structure
+- **Tailwind CSS** – Utility-first styling
+- **GSAP** – Animations and scroll interactions
+- **GSAP ScrollTrigger & SplitText** – Triggered animations and text splitting effects
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── Hero.jsx
+ │    ├── Cocktails.jsx
+ │    ├── About.jsx
+ │    ├── Art.jsx
+ │    ├── Menu.jsx
+ │    └── Contact.jsx
+ ├── App.jsx
+ └── main.jsx
+ └── index.css
+```
 
-## Expanding the ESLint configuration
+## 🖼️ Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+_Add your screenshots in the `assets/` folder and reference them below. Replace placeholders when ready._
+
+### Hero Section
+
+![Heropage Screenshot](assets/heropage.png)
+
+### Cocktails Section
+
+![Cocktails Screenshot](assets/cocktails.png)
+
+### Art Section
+
+![Art Screenshot](assets/theArt.png)
+
+## 🎨 Features
+
+- Smooth scroll-triggered animations
+- Split text animations for headings
+- Fully responsive layout via Tailwind
+- Animated hero section
+- Clean navigation bar
+- Custom imagery and branding aesthetics
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/your-repo.git
+
+# Navigate to project folder
+cd your-repo
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+## 🔧 Build for Production
+
+```bash
+npm run build
+```
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+## 📄 License
+
+This project is licensed under the MIT License.

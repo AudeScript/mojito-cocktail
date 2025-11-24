@@ -120,17 +120,17 @@ const socials = [
   {
     name: "Instagram",
     icon: "/images/insta.png",
-    url: "#",
+    url: "instagram.com/njokojunior",
   },
   {
     name: "X (Twitter)",
     icon: "/images/x.png",
-    url: "#",
+    url: "audescript",
   },
   {
     name: "Facebook",
     icon: "/images/fb.png",
-    url: "#",
+    url: "",
   },
 ];
 
